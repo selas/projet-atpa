@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Accueil Enseignant</title>
+		<meta CHARSET="utf-8" />
+		<!-- Librairire bootstrap-->
+		<link rel="stylesheet" href="bootstrap/css/bootstrap.css" />
+		<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" />
+		<link href="css/bootstrap-responsive.min.css" rel="stylesheet">
+		<script src="bootstrap/js/bootstrap.min.js "></script>
+		
+		<!--Autres-->
+		<script type="text/javascript" src="JS/canvasjs.min.js"></script>
+		<script src="js/styleSup.js"></script>
+		<link rel="stellsheet" href="" />	
+
+
+
+<!-- Librairire bootstrap-->
+		{% load staticfiles %}
+		<link rel="stylesheet" href='{% static "appatpa/bootstrap/css/bootstrap.css" %}' media="screen"/>
+		<link rel="stylesheet" href='{% static "appatpa/bootstrap/css/bootstrap.min.css" %}' media="screen" />
+		<link rel="stylesheet" href='{% static "appatpa/bootstrap/css/bootstrap-responsive.min.css" %}' media="screen" />
+		<script src='{% static "appatpa/bootstrap/css/js/bootstrap.min.js" %}'></script>
+
+
+		<!--Autres-->
+		<script type="text/javascript" src='{% static "appatpa/bootstrap/JS/canvasjs.min.js" %}'></script>
+		<script src='{% static "appapta/bootstrap/css/js/styleSup.js" %}'></script>		
+
+
+
+
+	
+	</head>
+	<body>
+		<section class="container-fluid">
+			<section class="span6 text-center">
+				<br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+				<section id="newQestion">
+					<a href="newquestion.html" id="btncration" class="btn btn-primary btn-large" title="Cliquer ici pour créer une nouvelle question">Créer une nouvelle question</a>
+				</section>
+				
+				<section id="sectionQuestionEnseignant">
+					<h4 id="questionEnseignant">Question</h4><br />
+					<section id="zone_rep">
+						
+					</section>
+					
+					<input type="button" class="btn btn-large" title="Cliquer ici pour valider votre question" value="Soumettre" onclick="">
+				</section>
+				
+			</section>
+				
+				<aside class="span4 offset2">
+						<br />
+						<section class="row-fluid">
+							<section class="bloc well text-center">
+								<h4>Bienvenu <span id="nomEnseignant">Monsieur</span></h4>
+							</section>
+							<section class="well">
+								<h4>Questions Fermées : </h4>
+								<section id="qestionFermee" class="text-center">
+									<a href="#" title="cliquer ici pour accéder à la question">Lien vers question</a>
+								</section>
+							</section>
+							
+							<section class="well">
+								<h4>Questions à choix Multiple : </h4>
+								<section id="qestionChoixMultiple" class="text-center">
+									<a href="#" title="cliquer ici pour accéder à la question">Lien vers question</a>
+								</section>
+							</section>
+							
+							<section class="well">
+								<h4>Questions Ouvertes : </h4>
+								<section id="qestionOuverte" class="text-center">
+									<a href="#" title="cliquer ici pour accéder à la question">Lien vers question</a>
+								</section>
+							</section>
+							
+						</section>
+				</aside>
+			</section>
+		</section>
+	</body>
+</html>

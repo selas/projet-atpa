@@ -1,0 +1,16 @@
+from django.conf.urls import patterns, url
+from appatpa.views import home, page_connexion, accueil, form_question
+
+urlpatterns = patterns('',
+	url(r'^home/$', 'appatpa.views.home', name='home'),
+	url(r'^home/(\w+)?$', 'appatpa.views.home', name='home_name'), 
+	#url(r'^listing_ens/$', 'appatpa.views.Liste_enseignant', name='listing_ens'),
+	#url(r'^listing_que/$', 'appatpa.views.tri_question', name='tri_question'),
+	#url(r'^connexion/$', 'appatpa.views.page_connexion', name='connexion'),
+	url(r'^accueil/$', 'appatpa.views.accueil', name='accueil'),
+
+	url(r'^form_question/$', 'appatpa.views.form_question', name='form_question')#,
+
+	#url(r'^error/$', 'appatpa.views.error', name='error')
+)
+
