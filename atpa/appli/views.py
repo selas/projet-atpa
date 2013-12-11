@@ -25,7 +25,7 @@ def choixquestion_view(request):
 	if request.method=='POST':
 		form = ChoixQuestion(request.POST)
 		if form.is_valid:
-			question = form.clean_data.get('question')
+			question = form.cleaned_data.get('question')
 			#fecrire du code pour savoir ce que l on va faire
 	else:
 		form = ChoixQuestion

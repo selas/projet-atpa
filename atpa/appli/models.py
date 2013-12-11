@@ -7,11 +7,11 @@ TYPEREP_CHOICES = (
 	('Choix alphanumerique', 'Choix alphanumerique')
 )
 
-class Enseignant(models.Model):
-	login_ens = models.CharField( "Votre login" , max_length = 50)
-	password_ens = models.CharField( "Mot de passe" , max_length = 20)
-	def __unicode__(self):
-		return self.login_ens
+# class Enseignant(models.Model):
+# 	login_ens = models.CharField( "Votre login" , max_length = 50)
+# 	password_ens = models.CharField( "Mot de passe" , max_length = 20)
+# 	def __unicode__(self):
+# 		return self.login_ens
 
 #class TypeReponse(models.Model):
 #	libelle_t = models.CharField("Type de question", max_length=20, choices=TYPEREP_CHOICES)
@@ -32,7 +32,7 @@ class Enseignant(models.Model):
 class Question(models.Model):
 	libelle_q = models.CharField("Votre question" , max_length = 250)
 	temps_q = models.IntegerField("Temps pour répondre" , max_length = 3 )
-	enseigant_q = models.ForeignKey(Enseignant)
+	# enseigant_q = models.ForeignKey(User)
 	typeReponse_q = models.CharField("Type de question", max_length=20, choices=TYPEREP_CHOICES)
 	def __unicode__(self):
 		return self.libelle_q
