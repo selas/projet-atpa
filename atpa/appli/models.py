@@ -7,6 +7,9 @@ TYPEREP_CHOICES = (
 	('Choix alphanumerique', 'Choix alphanumerique')
 )
 
+
+AUTH_USER_MODEL = 'appli.Enseignant'
+
 class Enseignant(models.Model):
 	login_ens = models.CharField( "Votre login" , max_length = 50)
 	password_ens = models.CharField( "Mot de passe" , max_length = 20)
