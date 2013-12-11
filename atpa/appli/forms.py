@@ -3,9 +3,6 @@ from django import forms
 class Connexion(forms.Form):
 	username = forms.CharField(max_length=100)
 	password = forms.CharField(max_length=100)
-	
-
-
 
 
 class AjoutQuestion(forms.Form):
@@ -25,4 +22,10 @@ class AjoutQuestion(forms.Form):
 
 	reponseValide_r = forms.BooleanField()#, default=True)
 
+	OPTION = (	
+				( "1" , "choix simple" ),
+				( "2" , "choix multiple" ),
+				( "3" , "alpha-numerique" )
+			)
+	Choix = forms.MultipleChoiceField(widget=forms.Select, choices = OPTION)
 

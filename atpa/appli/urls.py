@@ -1,4 +1,5 @@
 from django.conf.urls import patterns, url
+
 #from appli.views import  connexion, new_question
 
 urlpatterns = patterns('',
@@ -9,6 +10,6 @@ urlpatterns = patterns('',
 	#url(r'^form_question/$', 'appli.views.form_question', name='form_question'),
 	url(r'^connexion/$', 'appli.views.connexion', name='connexion'),
 	url(r'^new_question/$', 'appli.views.new_question', name='new_question'),
+
 	#url(r'^error/$', 'appli.views.error', name='error')
 )
-
