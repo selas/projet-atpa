@@ -13,6 +13,14 @@ TYPEREP_CHOICES = (
 # 	def __unicode__(self):
 # 		return self.login_ens
 
+AUTH_USER_MODEL = 'appli.Enseignant'
+
+class Enseignant(models.Model):
+	login_ens = models.CharField( "Votre login" , max_length = 50)
+	password_ens = models.CharField( "Mot de passe" , max_length = 20)
+	def __unicode__(self):
+		return self.login_ens
+
 #class TypeReponse(models.Model):
 #	libelle_t = models.CharField("Type de question", max_length=20, choices=TYPEREP_CHOICES)
 #	def __unicode__(self):
@@ -43,5 +51,6 @@ class Reponse(models.Model):
 	reponseValide_r = models.BooleanField("Cette réponse est-elle bonne ou non", default=True)
 	def __unicode__(self):
 		return self.libelle_r
+
 
 
