@@ -107,4 +107,3 @@ def form_question(request):
 #def error(request):
 #	 return render('appli/connexionEnseigant.html')
 
-
