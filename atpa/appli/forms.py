@@ -2,7 +2,7 @@ from django import forms
 
 class Connexion(forms.Form):
 	username = forms.CharField(max_length=100)
-	password = forms.CharField(max_length=100)
+	password = forms.CharField(widget=forms.PasswordInput)
 
 
 class AjoutQuestion(forms.Form):
@@ -13,19 +13,12 @@ class AjoutQuestion(forms.Form):
 		('Choix alphanumerique', 'Choix alphanumerique')
 	)
 
-
 	intituleQuestion = forms.CharField(max_length=100)
 	temps = forms.IntegerField()
-	typeReponse = forms.CharField(max_length=100)#, choices=TYPEREP_CHOICES)
+	typeReponse = forms.MultipleChoiceField(widget=forms.Select, choices=TYPEREP_CHOICES)
 
-	intituleReponse = forms.CharField(max_length = 100)
+	intituleReponse_oui = forms.CharField(max_length = 100)
+	reponseValide_oui = forms.BooleanField()
 
-	reponseValide_r = forms.BooleanField()#, default=True)
-
-	OPTION = (	
-				( "1" , "choix simple" ),
-				( "2" , "choix multiple" ),
-				( "3" , "alpha-numerique" )
-			)
-	Choix = forms.MultipleChoiceField(widget=forms.Select, choices = OPTION)
-
+	#intituleReponse_non = forms.CharField(max_length = 100)
+	#reponseValide_non = forms.BooleanField(default=True)
