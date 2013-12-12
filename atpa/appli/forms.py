@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 from django import forms
 
 class Connexion(forms.Form):
@@ -17,8 +19,9 @@ class AjoutQuestion(forms.Form):
 	temps = forms.IntegerField()
 	typeReponse = forms.MultipleChoiceField(widget=forms.Select, choices=TYPEREP_CHOICES)
 
-	intituleReponse_oui = forms.CharField(max_length = 100)
+	intituleReponse = forms.CharField(max_length = 100)
 	reponseValide_oui = forms.BooleanField()
+	reponseValide_non = forms.BooleanField()
 
 	#intituleReponse_non = forms.CharField(max_length = 100)
 	#reponseValide_non = forms.BooleanField(default=True)

@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+
 from django.contrib.auth.models import User
 from datetime import datetime 
 from django.db import models
@@ -12,7 +13,7 @@ TYPEREP_CHOICES = (
 
 
 class Question(models.Model):
-	enseigant_q = models.ForeignKey(User)
+	enseignant_q = models.ForeignKey(User)
 	libelle_q = models.CharField("Votre question" , max_length = 250)
 	temps_q = models.IntegerField("Temps pour répondre" , max_length = 4)
 	typeReponse_q = models.CharField("Type de question", max_length=20, choices=TYPEREP_CHOICES)
